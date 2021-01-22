@@ -9,14 +9,16 @@ module IntercomInvite
 
     RADIUS = 6371
 
+    # rubocop:disable Metrics/AbcSize
     def distance(origin)
       origin_latitude_radian = degree_to_radian(origin[0])
       origin_longitude_radian = degree_to_radian(origin[1])
-      delta_of_longitude = longitude_radian - origin_longitude_radian
       central_angle = arccos((sin(latitude_radian) * sin(origin_latitude_radian)) +
-                             (cos(latitude_radian) * cos(origin_latitude_radian) * cos(delta_of_longitude)))
+                             (cos(latitude_radian) * cos(origin_latitude_radian) *
+                             cos(longitude_radian - origin_longitude_radian)))
       central_angle * RADIUS
     end
+    # rubocop:enable Metrics/AbcSize
 
     def arccos(val)
       atan2(sqrt(1.0 - val * val), val)

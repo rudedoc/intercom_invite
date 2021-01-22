@@ -12,15 +12,17 @@ RSpec.describe IntercomInvite::FileRenderer do
 
   let(:base_coordinates) { ["53.349", "-6.260"] } # The Spire, O' Connell St
 
-  let(:ordered_entries) { IntercomInvite::Collection.new(entries, base_coordinates).entries_within_distance_ordered_by(100, :user_id) }
+  let(:ordered_entries) do
+    IntercomInvite::Collection.new(entries, base_coordinates).entries_within_distance_ordered_by(100, :user_id)
+  end
 
   let(:file_path) { "tmp/output.txt" }
 
   let(:renderer) { IntercomInvite::FileRenderer.new(ordered_entries, file_path) }
 
   before do
-    FileUtils.rm_rf('tmp')
-    FileUtils.mkdir('tmp')
+    FileUtils.rm_rf("tmp")
+    FileUtils.mkdir("tmp")
     renderer.render
   end
 
