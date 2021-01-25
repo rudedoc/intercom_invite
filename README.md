@@ -1,5 +1,11 @@
 ## About
-Program is written in Ruby and is compatible with and ruby version greater than 2.4.0. The program reads the `customers.txt` placed in the root directory of the project. When the program is run it outputs the results of the program to an `output.txt` file which is placed in the root of the program. I have stored a copy of results based on the customers file provided in the documentation test in a file called `result output.txt`.
+Program is written in Ruby and is compatible with and ruby version greater than 2.4.0.
+
+The program reads the `customers.txt` placed in the root directory of the project. When the program is run it outputs the results of the program to an `output.txt` file which is placed in the root of the program.
+
+The main entry point for the program is in the `Rakefile` in the route of the project.
+
+I have stored a copy of results based on the customers file provided in the documentation test in a file called `result output.txt`.
 
 ## Installation
 Clone the repository to your local machine:
