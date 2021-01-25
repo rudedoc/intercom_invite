@@ -20,10 +20,14 @@ Install test and development dependencies:
 Now the program should be ready to run.
 ## Usage
 To run the program, in the root of the project folder run you can run the following command:
+
 `rake run`
+
 This will generate an output.txt file.
 
 ## Tests and Linting
 To run the tests and linting, in the root of the project folder run you can run the following command:
+
 `rake`
+
 This will output rspec and rubocop linting reports.
